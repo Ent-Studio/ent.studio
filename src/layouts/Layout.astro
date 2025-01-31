@@ -1,0 +1,255 @@
+---
+const { title, bodyClass } = Astro.props;
+
+import '@/styles/main.css';
+---
+
+<!doctype html>
+<html lang="en" class="bg-white font-sans font-normal text-black antialiased">
+	<head>
+		<title>{title}</title>
+
+		<!-- Meta -->
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<!-- Preload font -->
+		<link rel="preload" href="/fonts/BureauSans/STKBureauSans-Book.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/BureauSans/STKBureauSans-Medium.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/BureauSans/STKBureauSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+	</head>
+	<body class={bodyClass} x-data="main()" id="swup" data-swup-container>
+		<slot />
+		<script>
+			import Swup from 'swup';
+
+			import Alpine from 'alpinejs';
+			import collapse from '@alpinejs/collapse';
+
+			import { gsap } from 'gsap';
+			import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+			gsap.registerPlugin(ScrollTrigger);
+
+			// core version + navigation, pagination modules:
+			import Swiper from 'swiper';
+			import { Navigation, Pagination } from 'swiper/modules';
+			// import Swiper and modules styles
+			import 'swiper/css';
+			// import 'swiper/css/navigation';
+			// import 'swiper/css/pagination';
+
+			// init Swiper:
+			const swiper = new Swiper('.swiper', {
+				modules: [Navigation, Pagination],
+				// Optional parameters
+				loop: true,
+				slidesPerView: 1,
+				keyboard: {
+					enabled: true,
+					onlyInViewport: false,
+				},
+				grabCursor: true,
+				updateOnWindowResize: true,
+
+				// If we need pagination
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'custom', // Use custom pagination
+					renderCustom: function (swiper, current, total) {
+						return `${current} / ${total}`; // Display the current slide and total slides
+					},
+				},
+
+				// Navigation arrows
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+
+			const swup = new Swup();
+
+			document.addEventListener('alpine:init', () => {
+				Alpine.data('main', () => ({
+					time: '', // Add a time property for the NYC clock
+					init() {
+						this.startClock();
+					},
+					startClock() {
+						const updateClock = () => {
+							// Use Intl.DateTimeFormat for accurate NYC time
+							const nycTime = new Date().toLocaleTimeString('en-US', {
+								timeZone: 'America/New_York',
+								hour12: false, // Use 24-hour format
+								hour: '2-digit',
+								minute: '2-digit',
+								second: '2-digit',
+							});
+
+							this.time = nycTime; // Set the formatted NYC time
+						};
+
+						// Initialize and start the clock
+						updateClock();
+						setInterval(updateClock, 1000);
+					},
+				}));
+			});
+
+			Alpine.plugin(collapse);
+			Alpine.start();
+
+			// Wait for the DOM to be fully loaded
+			window.addEventListener('load', function () {
+				// Fade in .main container
+
+				// After another 0.2s delay, slide up the footer
+				gsap.from('.page-home .element-nav', {
+					y: 70,
+					duration: 1.5,
+					delay: 0.6,
+					ease: 'power4.out',
+				});
+
+				// Create a GSAP timeline
+				const tl = gsap.timeline();
+
+				// Step 1: Blink on and off multiple times
+				gsap.to('.main-cta', {
+					opacity: 1,
+					duration: 0.4,
+					repeat: 4, // Blink on and off 3 times
+					yoyo: true, // Reverse the animation to blink back on
+				});
+
+				// Step 2: Widen
+				gsap.to('.main-cta', {
+					width: 56,
+					duration: 1,
+					delay: 2,
+					ease: 'expo.out',
+					onComplete: () => {
+						// Your next animation
+						gsap.set('.showcase-grid', {
+							pointerEvents: 'auto',
+						});
+					},
+				});
+
+				// Step 3: Slide-in Arrow (start slightly earlier before Step 2 finishes)
+				gsap.to('.main-cta__arrow', {
+					x: '-50%',
+					duration: 1,
+					delay: 2,
+					ease: 'expo.out',
+				}); // Overlap Step 3 to start 0.2 seconds before Step 2 finishes
+
+				gsap.to('.showcase-track', {
+					opacity: 1,
+					duration: 2,
+					delay: 2.4,
+					stagger: {
+						each: 0.04, // Delay between each item
+						grid: [1, 13], // 1 row and 5 columns
+						from: 'center', // Start the animation from the center (column 3)
+					},
+				});
+
+				gsap.to('.showcase-grid', {
+					y: '-50%', // Translates the element vertically by -50%
+					duration: 30, // Adjust the duration (in seconds) to match the timing of the CSS animation
+					ease: 'none', // Keep the motion linear, similar to default CSS keyframes
+					repeat: -1, // Infinite repetition
+				});
+
+				// new SplitText('.intro-text', { type: 'lines', linesClass: 'intro-text__child translate-y-[100%]' });
+				// new SplitText('.intro-text', { type: 'lines', linesClass: 'overflow-hidden' });
+
+				gsap.to('.intro-text__child', {
+					y: '0%',
+					duration: 0.4,
+					delay: 0.2,
+					ease: 'power3.out',
+					stagger: {
+						each: 0.1, // Delay between each item
+					},
+				});
+			});
+
+			swup.hooks.on('page:view', () => {
+				gsap.set('.main-cta', {
+					opacity: 1,
+				});
+				gsap.set('.main-cta', {
+					width: 56,
+				});
+				gsap.set('.showcase-grid', {
+					pointerEvents: 'auto',
+				});
+				gsap.set('.main-cta__arrow', {
+					x: '-50%',
+				});
+
+				gsap.set('.intro-text__child', {
+					y: '0%',
+				});
+
+				gsap.to('.showcase-grid', {
+					y: '-50%', // Translates the element vertically by -50%
+					duration: 30, // Adjust the duration (in seconds) to match the timing of the CSS animation
+					ease: 'none', // Keep the motion linear, similar to default CSS keyframes
+					repeat: -1, // Infinite repetition
+				});
+
+				const swiper = new Swiper('.swiper', {
+					modules: [Navigation, Pagination],
+					// Optional parameters
+					loop: true,
+					slidesPerView: 1,
+					keyboard: {
+						enabled: true,
+						onlyInViewport: false,
+					},
+					grabCursor: true,
+					updateOnWindowResize: true,
+
+					// If we need pagination
+					pagination: {
+						el: '.swiper-pagination',
+						type: 'custom', // Use custom pagination
+						renderCustom: function (swiper, current, total) {
+							return `${current} / ${total}`; // Display the current slide and total slides
+						},
+					},
+
+					// Navigation arrows
+					// navigation: {
+					// 	nextEl: '.swiper-button-next',
+					// 	prevEl: '.swiper-button-prev',
+					// },
+				});
+			});
+
+			swup.hooks.replace('animation:in:await', async () => {
+				await gsap.to('.showcase-track', {
+					opacity: 1,
+					duration: 0.5,
+				});
+			});
+
+			swup.hooks.replace('animation:out:await', async () => {
+				await gsap.to('.showcase-track', {
+					opacity: 0,
+					duration: 0.5,
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,210 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+import { Image } from 'astro:assets';
+
+// Thumbnails
+import Nav from '@/components/Nav.astro';
+---
+
+<Layout title="© Lumebrite Studio" bodyClass="page-studio">
+	<a href="/" data-swup-animation="home" class="transition-logo fixed left-2.5 top-2.5 z-50 text-[64px] font-semibold leading-none tracking-tighter text-black md:left-6 md:top-6"
+		>Ent.</a
+	>
+
+	<main class="element-main">
+		<div class="transition-fade transition-slide">
+			<div class="mb-[100px] mt-[240px] grid grid-cols-1 gap-12 px-6 pt-6 md:mb-[140px] md:mt-0 md:grid-cols-12">
+				<div class="md:col-span-5 md:col-start-8">
+					<img src="https://framerusercontent.com/images/I06KR1cNHvV1vpX2D7PpghsGC8.webp?scale-down-to=2048" class="mb-16 aspect-[3/4] object-cover opacity-80 md:hidden" />
+
+					<div class="grid grid-cols-1 gap-6 2xl:max-w-[640px]">
+						<p class="text-[17px] leading-[1.3]">
+							<span class="font-semibold">Ent Studio</span> is a boutique design team dedicated to supporting early-stage companies and embedding seamlessly within existing product
+							teams. We specialize in helping businesses make a strong consumer impression through thoughtful design that aligns with their brand and goals. Our expertise lies in balancing
+							impactful, polished outputs with the flexibility needed for fast-paced environments.
+						</p>
+						<p class="text-[17px] leading-[1.3]">
+							What sets us apart is our sprint-based project model, allowing us to adapt quickly to the evolving nature of modern projects. Whether it's launching a new product or
+							refining an existing experience, we provide the essentials efficiently while remaining agile to weekly changes. At Ent Studio, we're here to help you craft designs
+							that resonate and drive results.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid grid-cols-1 gap-12 px-6 pt-6 md:grid-cols-12">
+				<div class="hidden md:col-span-7 md:block">
+					<img src="https://framerusercontent.com/images/I06KR1cNHvV1vpX2D7PpghsGC8.webp?scale-down-to=2048" class="aspect-[8/5] rounded-2xl object-cover opacity-80" />
+				</div>
+
+				<div class="md:col-span-5 2xl:max-w-[640px]">
+					<div x-data="{activeTab: 0}">
+						<div class="relative inline-flex rounded-full bg-black/[0.1] px-1 py-1">
+							<div class="absolute left-1 top-1 h-6 w-24 rounded-full bg-black duration-200" :class="activeTab == 0 ? 'translate-x-0' : 'translate-x-24'"></div>
+							<button
+								@click="activeTab = 0"
+								class="relative z-10 flex h-6 w-24 cursor-pointer items-center justify-center rounded-full text-xs font-medium duration-200"
+								:class="activeTab == 0 ? 'text-white' : 'text-black'">Full sprint</button
+							>
+							<button
+								@click="activeTab = 1"
+								class="relative z-10 flex h-6 w-24 cursor-pointer items-center justify-center rounded-full text-xs font-medium duration-200"
+								:class="activeTab == 1 ? 'text-white' : 'text-black'">Micro sprint</button
+							>
+						</div>
+						<div class="mt-8" x-show="activeTab == 0">
+							<div class="text-[20px] font-medium leading-[1.2] tracking-tight text-black">
+								$4,900<br />
+								<span class="text-[18px] text-black/60">per sprint</span>
+							</div>
+							<p class="mt-6 text-[13px] text-black/60">V7 Go is more accurate than calling <br />a model provider directly.</p>
+						</div>
+						<div class="mt-8" x-show="activeTab == 1">
+							<div class="text-[20px] font-medium leading-[1.2] tracking-tight text-black">
+								$950<br />
+								<span class="text-[18px] text-black/60">per sprint</span>
+							</div>
+							<p class="mt-6 text-[13px] text-black/60">V7 Go is more accurate than calling <br />a model provider directly.</p>
+						</div>
+						<a href="#" class="group mt-5 inline-flex items-center gap-2.5">
+							<span class="border-b border-transparent text-[13px] font-medium text-black group-hover:border-white/40">Go to Client Portal</span>
+							<div class="flex size-4 items-center justify-center rounded-full bg-black text-white">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="12"
+									height="12"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg
+								>
+							</div>
+						</a>
+					</div>
+					<div class="mt-20">
+						<h3 class="border-t border-black/20 pt-3 font-mono text-xs uppercase text-black/40">Capabilities</h3>
+						<ul class="mt-4 grid grid-cols-2 text-[13px]">
+							<li>Web design</li>
+							<li>Product design</li>
+							<li>Branding</li>
+							<li>Pitch decks</li>
+							<li>Design systems</li>
+							<li>Web design</li>
+							<li>Product design</li>
+							<li>Branding</li>
+							<li>Pitch decks</li>
+							<li>Design systems</li>
+							<li>Product design</li>
+							<li>Branding</li>
+							<li>Pitch decks</li>
+							<li>Design systems</li>
+						</ul>
+					</div>
+					<div class="mt-20">
+						<h3 class="border-t border-black/20 pt-3 font-mono text-xs uppercase text-black/40">FAQ</h3>
+						<ul class="mt-1.5 grid grid-cols-1">
+							<li class="group py-2.5 text-[13px]" x-data="{ isExpanded: false }">
+								<div class="flex cursor-pointer items-center justify-between" @click="isExpanded = !isExpanded">
+									<div class="" :class="isExpanded ? '' : 'duration-200 group-hover:translate-x-2'">What's the best thing about Switzerland?</div>
+									<span class="font-mono text-xs text-black/40">01</span>
+								</div>
+
+								<div class="" x-show="isExpanded" x-collapse>
+									<p class="pt-2 text-[13px] text-black/60">
+										V7 Go is more accurate than calling a model provider directly. Its power is in the ability to break down complex tasks into reasoning steps, leading to a 32%
+										reduction in errors. They know the quirks of the latest foundation models and how to optimize AI token spend.
+									</p>
+								</div>
+							</li>
+							<li class="group py-2.5 text-[13px]" x-data="{ isExpanded: false }">
+								<div class="flex cursor-pointer items-center justify-between" @click="isExpanded = !isExpanded">
+									<div class="" :class="isExpanded ? '' : 'duration-200 group-hover:translate-x-2'">What do you call someone with no body and no nose?</div>
+									<span class="font-mono text-xs text-black/40">02</span>
+								</div>
+
+								<div class="" x-show="isExpanded" x-collapse>
+									<p class="pt-2 text-[13px] text-black/60">
+										V7 Go is more accurate than calling a model provider directly. Its power is in the ability to break down complex tasks into reasoning steps, leading to a 32%
+										reduction in errors. They know the quirks of the latest foundation models and how to optimize AI token spend.
+									</p>
+								</div>
+							</li>
+							<li class="group py-2.5 text-[13px]" x-data="{ isExpanded: false }">
+								<div class="flex cursor-pointer items-center justify-between" @click="isExpanded = !isExpanded">
+									<div class="" :class="isExpanded ? '' : 'duration-200 group-hover:translate-x-2'">How do you make holy water?</div>
+									<span class="font-mono text-xs text-black/40">03</span>
+								</div>
+
+								<div class="" x-show="isExpanded" x-collapse>
+									<p class="pt-2 text-[13px] text-black/60">
+										V7 Go is more accurate than calling a model provider directly. Its power is in the ability to break down complex tasks into reasoning steps, leading to a 32%
+										reduction in errors. They know the quirks of the latest foundation models and how to optimize AI token spend.
+									</p>
+								</div>
+							</li>
+							<li class="group py-2.5 text-[13px]" x-data="{ isExpanded: false }">
+								<div class="flex cursor-pointer items-center justify-between" @click="isExpanded = !isExpanded">
+									<div class="" :class="isExpanded ? '' : 'duration-200 group-hover:translate-x-2'">What do you call someone with no body and no nose?</div>
+									<span class="font-mono text-xs text-black/40">04</span>
+								</div>
+
+								<div class="" x-show="isExpanded" x-collapse>
+									<p class="pt-2 text-[13px] text-black/60">
+										V7 Go is more accurate than calling a model provider directly. Its power is in the ability to break down complex tasks into reasoning steps, leading to a 32%
+										reduction in errors. They know the quirks of the latest foundation models and how to optimize AI token spend.
+									</p>
+								</div>
+							</li>
+							<li class="group py-2.5 text-[13px]" x-data="{ isExpanded: false }">
+								<div class="flex cursor-pointer items-center justify-between" @click="isExpanded = !isExpanded">
+									<div class="" :class="isExpanded ? '' : 'duration-200 group-hover:translate-x-2'">How do you make holy water?</div>
+									<span class="font-mono text-xs text-black/40">05</span>
+								</div>
+
+								<div class="" x-show="isExpanded" x-collapse>
+									<p class="pt-2 text-[13px] text-black/60">
+										V7 Go is more accurate than calling a model provider directly. Its power is in the ability to break down complex tasks into reasoning steps, leading to a 32%
+										reduction in errors. They know the quirks of the latest foundation models and how to optimize AI token spend.
+									</p>
+								</div>
+							</li>
+							<li class="group py-2.5 text-[13px]" x-data="{ isExpanded: false }">
+								<div class="flex cursor-pointer items-center justify-between" @click="isExpanded = !isExpanded">
+									<div class="" :class="isExpanded ? '' : 'duration-200 group-hover:translate-x-2'">What do you call someone with no body and no nose?</div>
+									<span class="font-mono text-xs text-black/40">06</span>
+								</div>
+
+								<div class="" x-show="isExpanded" x-collapse>
+									<p class="pt-2 text-[13px] text-black/60">
+										V7 Go is more accurate than calling a model provider directly. Its power is in the ability to break down complex tasks into reasoning steps, leading to a 32%
+										reduction in errors. They know the quirks of the latest foundation models and how to optimize AI token spend.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="h-[200px]"></div>
+					<div class="mb-6">
+						<div class="flex items-center text-[13px] font-semibold leading-none tracking-tight text-black">
+							<!-- <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 0H7V9H16V16H0V0Z" fill="white"></path>
+								<path d="M16 4C16 6.20914 14.2091 8 12 8C9.79086 8 8 6.20914 8 4C8 1.79086 9.79086 0 12 0C14.2091 0 16 1.79086 16 4Z" fill="white"></path>
+							</svg> -->
+							© Lumebrite Studio 2025
+						</div>
+						<p class="mt-5 text-[11px] text-black/50">
+							V7 Go is more accurate than calling a model provider directly. Its power is in the ability to break down complex tasks into reasoning steps, leading to a 32%
+							reduction in errors. They know the quirks of the latest foundation models and how to optimize AI token spend. They know the quirks of the.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- <Nav /> -->
+</Layout>

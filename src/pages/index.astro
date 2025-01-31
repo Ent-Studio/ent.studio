@@ -1,0 +1,1082 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import '@/styles/main.css';
+import { Image } from 'astro:assets';
+
+// Components
+import Nav from '@/components/Nav.astro';
+
+// Thumbnails
+import powerCityImage01 from '@/assets/thumbnails/powerCityImage01.png';
+import runboyImage01 from '@/assets/thumbnails/runboyImage01.png';
+import javelinPowerImage01 from '@/assets/thumbnails/javelinPowerImage01.png';
+import javelinPowerImage02 from '@/assets/thumbnails/javelinPowerImage02.png';
+import javelinPowerImage03 from '@/assets/thumbnails/javelinPowerImage03.png';
+import thePetalCompanyImage01 from '@/assets/thumbnails/thePetalCompanyImage01.png';
+---
+
+<Layout title="© Lumebrite Studio" bodyClass="page-home">
+	<div class="transition-logo fixed left-2.5 top-2.5 z-50 text-[64px] font-semibold leading-none tracking-tighter text-[#E7E7E7] md:left-6 md:top-6">Ent.</div>
+
+	<nav class="transition-nav fixed bottom-2.5 left-2.5 right-2.5 z-50 md:bottom-6 md:left-6 md:w-full md:max-w-[360px]">
+		<div class="rounded-3xl bg-[#DDDDDD]/60 p-5 backdrop-blur-md">
+			<h1 class="intro-text max-w-[280px] text-[13px] text-black/70">
+				<div class="overflow-hidden" style="display: block; text-align: start; position: relative;">
+					<div class="intro-text__child translate-y-[100%]">
+						<span class="font-medium text-black">Enterprise-grade security and compliance.</span>
+					</div>
+				</div>
+				<div class="overflow-hidden" style="display: block; text-align: start; position: relative;">
+					<div class="intro-text__child translate-y-[100%]">Your data, protected with end-to-end encryption</div>
+				</div>
+				<div class="overflow-hidden" style="display: block; text-align: start; position: relative;">
+					<div class="intro-text__child translate-y-[100%]">and SOC 2 Type II certification.</div>
+				</div>
+			</h1>
+
+			<a
+				href="/studio"
+				data-swup-animation="studio"
+				class="main-cta relative mt-5 flex h-7 w-14 items-center justify-center overflow-hidden rounded-full bg-black text-white"
+				style="width: 28px; opacity: 0;"
+			>
+				<div class="main-cta__arrow transition-arrow absolute left-0 top-0 flex translate-x-[-50%]" style="transform: translateX(-100%)">
+					<div class="flex h-7 w-14 flex-none items-center justify-center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+						>
+					</div>
+					<div class="flex h-7 w-14 flex-none items-center justify-center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+						>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="mt-6 font-mono text-[12px] font-medium leading-none text-black">
+			<div class="nyc-clock">
+				NYC <span x-text="time"></span>
+			</div>
+		</div>
+	</nav>
+
+	<main class="element-main fixed inset-0 w-full overflow-hidden">
+		<div class="showcase-grid pointer-events-none mx-[-100px] flex justify-center gap-7 md:gap-[105px]">
+			<div class="showcase-track relative flex flex-col justify-center" style="opacity: 0">
+				<div class="flex flex-col items-start">
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</div>
+			</div>
+			<div class="showcase-track relative flex translate-y-[120px] flex-col justify-center" style="opacity: 0">
+				<ul class="relative flex flex-col items-start">
+					<li
+						class="flex-none] absolute left-0 top-0 w-[100px] translate-y-[-100%] cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</li>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</ul>
+			</div>
+			<div class="showcase-track relative flex flex-col justify-center" style="opacity: 0">
+				<div class="flex flex-col items-start">
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</div>
+			</div>
+			<div class="showcase-track relative flex translate-y-[120px] flex-col justify-center" style="opacity: 0">
+				<ul class="relative flex flex-col items-start">
+					<li
+						class="flex-none] absolute left-0 top-0 w-[100px] translate-y-[-100%] cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</li>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</ul>
+			</div>
+			<div class="showcase-track relative flex flex-col justify-center" style="opacity: 0">
+				<div class="flex flex-col items-start">
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</div>
+			</div>
+			<div class="showcase-track relative flex translate-y-[120px] flex-col justify-center" style="opacity: 0">
+				<ul class="relative flex flex-col items-start">
+					<li
+						class="flex-none] absolute left-0 top-0 w-[100px] translate-y-[-100%] cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</li>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</ul>
+			</div>
+			<div class="showcase-track relative flex flex-col justify-center" style="opacity: 0">
+				<div class="flex flex-col items-start">
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</div>
+			</div>
+			<div class="showcase-track relative flex translate-y-[120px] flex-col justify-center" style="opacity: 0">
+				<ul class="relative flex flex-col items-start">
+					<li
+						class="flex-none] absolute left-0 top-0 w-[100px] translate-y-[-100%] cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</li>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</ul>
+			</div>
+			<div class="showcase-track relative flex flex-col justify-center" style="opacity: 0">
+				<div class="flex flex-col items-start">
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</div>
+			</div>
+			<div class="showcase-track relative flex translate-y-[120px] flex-col justify-center" style="opacity: 0">
+				<ul class="relative flex flex-col items-start">
+					<li
+						class="flex-none] absolute left-0 top-0 w-[100px] translate-y-[-100%] cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</li>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</ul>
+			</div>
+			<div class="showcase-track relative flex flex-col justify-center" style="opacity: 0">
+				<div class="flex flex-col items-start">
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={runboyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage02} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={javelinPowerImage03} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={powerCityImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+					<a
+						href="/work-1"
+						data-swup-animation="work"
+						class="w-[70px] flex-none cursor-pointer py-[40px] duration-300 hover:scale-[1.2] hover:opacity-100 md:w-[140px] 2xl:py-[100px]"
+					>
+						<Image src={thePetalCompanyImage01} alt="" width="300" loading="eager" class="aspect-square w-full object-cover" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- <Nav /> -->
+</Layout>

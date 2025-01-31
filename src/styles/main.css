@@ -1,0 +1,109 @@
+/* The integration's default injected base.css file */
+@import 'tailwindcss';
+
+@theme {
+	--font-sans: 'Bureau Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+	--font-mono: 'Neue Montreal Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+	/* ... */
+}
+
+/* Unscoped, delivered as-is to the browser. */
+:root {
+	--swiper-pagination-bullet-inactive-color: white !important;
+	--swiper-navigation-size: 22px !important;
+	--swiper-navigation-color: white !important;
+	--swiper-pagination-color: white !important;
+}
+
+[x-cloak] {
+	display: none !important;
+}
+
+@font-face {
+	font-family: 'Bureau Sans';
+	src: url('/fonts/BureauSans/STKBureauSans-Book.woff2') format('woff2');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Bureau Sans';
+	src: url('/fonts/BureauSans/STKBureauSans-Medium.woff2') format('woff2');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Bureau Sans';
+	src: url('/fonts/BureauSans/STKBureauSans-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Neue Montreal Mono';
+	src: url('/fonts/NeueMontrealMono/PPNeueMontrealMono-Medium.otf');
+	font-weight: 500;
+}
+
+@keyframes forwardArrow {
+	from {
+		transform: translateX(-75%);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+/* @font-face {
+	font-family: 'Saans';
+	src: url('/fonts/Saans/GX/SaansVFUprights.woff2') format('woff2');
+	font-weight: 1 999;
+} */
+
+.animate-forwardArrow {
+	animation: forwardArrow 0.4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.intro-text {
+	overflow: hidden;
+}
+
+.transition-nav {
+	transform: translateY(0);
+	transition: 0.5s;
+}
+
+html.is-animating .transition-nav {
+	transform: translateY(200px);
+	transition: 0.5s cubic-bezier(0.7, -0.65, 0.25, 1.75);
+}
+
+.transition-fade {
+	opacity: 1;
+	transition: 0.5s;
+}
+
+html.is-animating .transition-fade {
+	opacity: 0;
+}
+
+.transition-slide {
+	transform: translateY(0px);
+	transition: 0.5s;
+}
+
+html.is-animating .transition-slide {
+	transform: translateY(50px);
+	transition: 0.5s cubic-bezier(0.7, -0.65, 0.25, 1.75);
+}
+
+.transition-logo {
+	transition: 0.5s;
+}
+
+html.is-animating .transition-logo {
+	color: black;
+}
+
+html.is-animating.to-home .transition-logo {
+	color: #e7e7e7;
+}
